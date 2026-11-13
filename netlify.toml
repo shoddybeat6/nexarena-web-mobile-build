@@ -1,0 +1,14 @@
+[build]
+  # Assemble the desktop (website/) and mobile (mobile/) versions into one site.
+  command = "rm -rf dist && mkdir dist && cp -r public/. dist/ && cp -r website mobile dist/"
+  publish = "dist"
+
+[[redirects]]
+  from = "/website"
+  to = "/website/index.html"
+  status = 301
+
+[[redirects]]
+  from = "/mobile"
+  to = "/mobile/index.html"
+  status = 301
