@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculate fees | NexArena</title>
+    <meta name="description" content="NexArena Gaming &amp; Esports Arena, Johannesburg.">
+    <link rel="icon" href="images/logo.png">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header>
+    <a class="brand" href="index.html"><img src="images/logo.png" alt="NexArena Gaming &amp; Esports Arena logo"></a>
+    <nav><a href="index.html">Home</a><a href="about.html">About us</a><a href="packages.html">Packages</a><a href="fees.html" class="on">Calculate fees</a><a href="contact.html">Contact us</a></nav>
+</header>
+
+<main>
+<section>
+    <h2>Calculate fees &amp; checkout</h2>
+    <p class="sub">Select your packages. The more you book, the bigger your discount.</p>
+    <div class="grid gap" id="tiles"></div>
+
+    <div class="grid">
+        <div class="card">
+            <h3>Your quote (<span id="cnt">0</span> selected)</h3>
+            <div class="total"><span>Subtotal</span><span id="sub">R0</span></div>
+            <div class="total"><span>Discount</span><span id="disc">0% (-R0)</span></div>
+            <div class="total big"><span>TOTAL</span><span id="tot">R0</span></div>
+            <button class="btn" id="quote">Get my quote</button>
+            <div class="msg" id="qMsg"></div>
+            <p class="note">The calculated total is a quoted amount only and does not constitute a formal invoice.</p>
+        </div>
+        <div class="card">
+            <h3>Booking discounts</h3>
+            <table>
+                <tr><th>Bookings</th><th>Discount</th></tr>
+                <tr><td>One</td><td>None</td></tr>
+                <tr><td>Two</td><td>5%</td></tr>
+                <tr><td>Three</td><td>10%</td></tr>
+                <tr><td>More than three</td><td>15%</td></tr>
+            </table>
+        </div>
+    </div>
+</section>
+</main>
+
+<footer>&copy; 2026 NexArena Gaming &amp; Esports Arena &middot; Johannesburg</footer>
+
+<script src="js/script.js"></script>
+</body>
+</html>

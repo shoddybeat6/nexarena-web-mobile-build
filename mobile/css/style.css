@@ -1,0 +1,63 @@
+/* 1. CSS RESET */
+* { margin: 0; padding: 0; box-sizing: border-box; -webkit-tap-highlight-color: transparent; }
+
+/* 2. VARIABLES (NexArena colour palette) */
+:root {
+    --navy: #0B0E1A;
+    --panel: #131833;
+    --cyan: #00E5FF;
+    --violet: #B026FF;
+    --cloud: #E6E9F5;
+    --magenta: #FF2D95;
+    --grad: linear-gradient(90deg, #00E5FF, #B026FF);
+}
+
+/* 3. PAGE + PHONE FRAME */
+body { min-height: 100vh; display: flex; align-items: center; justify-content: center; background: radial-gradient(circle at 30% 20%, #1a1f4a, #0B0E1A 60%); font-family: Arial, Helvetica, sans-serif; color: var(--cloud); }
+a { color: inherit; text-decoration: none; }
+.phone { width: 100%; max-width: 390px; height: min(100vh, 800px); background: var(--navy); display: flex; flex-direction: column; overflow: hidden; border-radius: 36px; border: 8px solid #1c2140; box-shadow: 0 20px 60px #000a, 0 0 40px #B026FF33; }
+@media (max-width: 430px) { .phone { border: 0; border-radius: 0; height: 100vh; max-width: none; } }
+
+/* 4. STATUS BAR + TOP BAR */
+.status { display: flex; justify-content: space-between; padding: 10px 22px 0; font-size: 12px; font-weight: 700; }
+.top { display: flex; align-items: center; gap: 10px; padding: 10px 18px; border-bottom: 1px solid #00E5FF30; }
+.top b { flex: 1; text-align: center; font-size: 17px; margin-right: 30px; }
+.lg { height: 30px; width: auto; }
+#back { color: var(--cyan); font-size: 26px; line-height: 1; width: 30px; }
+
+/* 5. SCREEN CONTENT */
+.scr { flex: 1; overflow-y: auto; padding: 18px; }
+h2 { font-size: 18px; color: var(--cyan); margin: 4px 0 10px; }
+h3 { font-size: 16px; margin-bottom: 4px; }
+.card { background: var(--panel); border: 1px solid #B026FF55; border-radius: 14px; padding: 16px; margin-bottom: 14px; font-size: 14px; }
+.badge { display: inline-block; background: var(--magenta); color: #fff; font-size: 11px; font-weight: 700; padding: 2px 9px; border-radius: 99px; margin-bottom: 8px; }
+.price { color: var(--cyan); font-weight: 800; font-size: 20px; margin: 4px 0 8px; }
+.gap { margin-bottom: 8px; }
+.note { font-size: 12px; opacity: .65; margin-top: 8px; }
+.ph { height: 90px; border-radius: 10px; border: 1px dashed #00E5FF66; background: linear-gradient(135deg, #00E5FF1f, #B026FF2e); margin-bottom: 10px; }
+.row { display: flex; justify-content: space-between; align-items: center; gap: 10px; }
+.row .arrow { color: var(--cyan); font-size: 22px; }
+ul.inc { list-style: none; margin-bottom: 10px; }
+ul.inc li { padding: 4px 0 4px 22px; position: relative; }
+ul.inc li:before { content: "\2713"; position: absolute; left: 0; color: var(--cyan); }
+
+/* 6. BUTTONS + FORMS */
+.btn { display: block; width: 100%; text-align: center; border: 0; cursor: pointer; background: var(--grad); color: var(--navy); font-weight: 800; padding: 13px; border-radius: 10px; font-size: 15px; margin-top: 6px; }
+.btn.alt { background: none; color: var(--cyan); border: 1px solid var(--cyan); }
+input { width: 100%; background: var(--navy); color: var(--cloud); border: 1px solid #00E5FF55; border-radius: 8px; padding: 11px; margin: 4px 0 10px; font: inherit; }
+label { font-size: 13px; opacity: .85; }
+.msg { display: none; margin-top: 10px; color: var(--cyan); font-weight: 700; font-size: 13px; }
+
+/* 7. FEE CALCULATOR */
+.tiles { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-bottom: 14px; }
+.tile { cursor: pointer; text-align: center; padding: 14px 8px; border: 1px solid #00E5FF55; border-radius: 12px; background: var(--panel); font-size: 13px; }
+.tile.sel { background: linear-gradient(135deg, #00E5FF, #B026FF); color: var(--navy); font-weight: 800; border-color: transparent; }
+.tile small { display: block; margin-top: 3px; opacity: .8; }
+.total { display: flex; justify-content: space-between; padding: 6px 0; border-bottom: 1px solid #E6E9F522; }
+.total.big { font-size: 20px; font-weight: 800; color: var(--cyan); border: 0; }
+
+/* 8. BOTTOM TAB BAR */
+.tabs { display: flex; border-top: 1px solid #00E5FF30; background: #0e1226; }
+.tabs a { flex: 1; color: #E6E9F599; padding: 9px 0 12px; font-size: 10px; display: flex; flex-direction: column; align-items: center; gap: 3px; }
+.tabs a.on { color: var(--cyan); }
+svg.i { width: 22px; height: 22px; fill: none; stroke: currentColor; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
