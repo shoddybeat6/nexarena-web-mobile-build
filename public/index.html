@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NexArena</title>
+    <link rel="icon" href="/mobile/images/logo-icon.png">
+    <script>
+        // Send visitors to their saved choice, otherwise pick by screen size / device.
+        (function () {
+            var view = null;
+            try { view = localStorage.getItem('nexarena-view'); } catch (e) {}
+            if (view !== 'mobile' && view !== 'website') {
+                var small = window.matchMedia('(max-width: 768px)').matches;
+                var touch = /Android|iPhone|iPad|iPod|Mobile/i.test(navigator.userAgent);
+                view = (small || touch) ? 'mobile' : 'website';
+            }
+            location.replace('/' + view + '/index.html' + location.search);
+        })();
+    </script>
+    <style>body{background:#0B0E1A;color:#E6E9F5;font-family:Arial,Helvetica,sans-serif;display:flex;min-height:100vh;align-items:center;justify-content:center;gap:12px}a{color:#00E5FF}</style>
+</head>
+<body>
+    <noscript><a href="/website/index.html">Desktop version</a> &middot; <a href="/mobile/index.html">Mobile version</a></noscript>
+</body>
+</html>
